@@ -1,0 +1,583 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+</head>
+
+<body>
+    <div class="mt-5"></div>
+    <a href="{% url 'home' %}"> <img src="{% static 'img/company2.png' %}" id="schoolicon" alt=""></a>
+
+    {% for msg in messages %}
+    <h1>{{msg}}</h1>
+    {% endfor %}
+    <!-- <div class="title">
+        <p>School Admission Form</p>
+    </div> -->
+
+    <!-- <div class="dear">
+        <p>Dear Parent/Guardian, <br> <br>
+            Welcome to our school's Admission Center. Please use this form to apply for your child's <br>
+            admission to our school. Admission forms are processed within 48 hours. You will <br>
+            receive an email confirmation when we process your application.
+        </p>
+    </div> -->
+    <div class="flexall">
+    <div class="map">
+        <div class="find2">
+        <p id="find"> You may find our head office at:</p> 
+        <p id="lighter">  GQC8+PC9, Sapele Road, Warri 332104, Warri, Delta State, Nigeria.</p>  
+    </div>
+    <p><iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3971.3043175174703!2d5.763927715250543!3d5.52178273552697!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1041b28f39c0ec59%3A0x17ab237fdbe0824a!2sNIIT%20WARRI%20Centre!5e0!3m2!1sen!2sng!4v1663265390283!5m2!1sen!2sng"
+            width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe></p>
+        </div>
+        <div class="flexi">
+    <form method="POST" class="form">
+        {%csrf_token%}
+        <H3 id="grey">Client's Name</H3>
+        <div class="names">
+            <div class="fn">
+                <input type="text" id="input" name="firstname" placeholder="Firstname">
+
+            </div>
+            <div class="ln">
+                <input type="text" name="lastname" id="input" placeholder="Lastname">
+
+            </div>
+        </div>
+        <br><br>
+        <H3 id="grey">Contact Information</H3>
+        <div class="second">
+            <div class="address">
+                <input type="text" placeholder="Address" name="address" id="input">
+
+            </div>
+            <div class="phone">
+                <input type="text" id="input" placeholder="Phone" name="phone">
+
+            </div>
+        </div> <br><br>
+        <br>
+        <div class="third">
+            <div class="second">
+                <!-- <div class="age">
+                    <input type="number" name="age" id="">
+                    <p>Age</p>
+                </div> -->
+
+                <div class="phone2">
+                    <input type="text" id="input" placeholder="Company Name" name="company">
+
+                </div>
+            </div>
+        </div>
+<br>
+        <div class="more">
+            <!-- <button type="submit" id="submit"><a href="">Apply Now</a></button> -->
+            <button id="submit" type="submit">Submit</button>
+        </div>
+    </form>
+</div>
+</div>
+<footer>
+    <div class="final">
+        <div class="flexfoot">
+            <br>
+            <img src="{% static 'img/company.png' %}" id="companyicon" alt="">
+            <p id="rine">RINE EDH INTEGRATED SERVICES LIMITED is an indigenous Limited Liability Company
+                incorporated in
+                2012 with RC 1040277 under the laws of the Federal Republic of Nigeria. It is registered with the
+                Department
+                of Petroleum Resources of the Nigerian National Corporation, Nipex, NJQS, and the Inland Revenue
+                Service</p>
+
+            <div class="icons">
+                <img id="icon" src="{% static 'img/twitter.png' %}">
+                <img id="icon" src="{% static 'img/insta.png' %}">
+                <img id="icon" src="{% static 'img/linked.png' %}">
+            </div>
+            <div class="email">
+                <p id="email">Email: <p> 
+                    . loremeed2@gmail.com <br>
+                    . info@lorem.com
+            </div>
+        </div>
+        <div class="footright">
+            <div class="contactflex">
+                <h2 id="contactus">Contact Us</h2> <br>
+                <p>
+                <div class="reddit">Headquarters</div>
+                114, Ebitu Ukiwe Street, Jabi District, <br>
+                Abuja, Nigeria</p>
+                <br>
+
+                <p>
+                <div class="office1">
+                    <p>
+                    <div id="office">Office: </div> +234 805 333 3861
+                </div>
+                </p> <br>
+                <div class="office">
+                    <p>
+                    <div id="office">Mobile: </div> +234706 876 0336
+                </div>
+                </p>
+            </div>
+
+            <br> <br>
+
+            <div class="contactflex">
+
+                <p>
+                <div id="raise" class="reddit">Warri Site Office</div>
+                #GQC8+PC9, Sapele Road, Warri 332104,<br> Delta State, Nigeria.</p>
+                <br>
+                <div class="office">
+                    <p>
+                    <div id="office">Mobile: </div> +234 803 424 3736
+                </div>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+<style>
+    body {
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        margin: 0 auto;
+        
+    }
+iframe{
+    position: relative;
+}
+    .form {
+        padding-top: 70px;
+        margin-left: 100px;
+        border: 2px solid rgba(0, 153, 255, 0.856);
+        border-radius: 10px;
+        padding-bottom: 100px;
+    width: 700px;
+    padding-right: 20px;
+    background-color: rgba(255, 255, 255, 0.911);
+    border-radius: 10px;
+    position: relative;
+    }
+
+    #schoolicon {
+        margin-top: -60px;
+        width: 300px;
+        margin-left: 800px;
+        margin-bottom: -50px;
+        position: relative;
+    }
+
+    .phone2 {
+        margin-left: -50px;
+    }
+
+    .third {
+        margin-left: 200px;
+        text-align: center;
+    }
+
+    .title {
+        margin-left: 100px;
+        font-size: 40px;
+        font-weight: bolder;
+        color: rgb(223, 43, 31);
+    }
+
+    .dear {
+        color: gray;
+        font-size: 23px;
+        font-weight: bold;
+        margin-left: 100px;
+    }
+
+    .names {
+        margin-left:50px;
+        display: flex;
+        flex-direction: row;
+        text-align: center;
+    }
+
+    .names p {
+        font-weight: 400;
+        font-size: 15px;
+    }
+
+    .fn {
+        display: flex;
+        flex-direction: column;
+        margin-right: 20px;
+    }
+
+    .ln {
+        display: flex;
+        flex-direction: column;
+    }
+
+    h3 {
+        margin-left: 777px;
+        font-size: 24px;
+    }
+
+    .names input {
+        width: 400px;
+        height: 40px;
+        border: none;
+        border-bottom: 1px solid red;
+
+    }
+
+    #input {
+        width: 300px;
+        height: 40px;
+        text-align: center;
+        color: rgb(0, 0, 0);
+        background:none;
+        font-weight: 100;
+        font-size: 15px;
+        outline: none;
+        border: none;
+        font-weight: bold;
+        border-bottom: 1px solid rgb(0, 174, 255);
+    }
+
+    #input ::placeholder {
+        color: black;
+    }
+
+    input :active {
+        font-size: 27px;
+        background-color: rgba(255, 255, 255, 0.911);
+    }
+
+    .second {
+        margin-left: 50px;
+        display: flex;
+        flex-direction: row;
+        text-align: center;
+    }
+
+    .second p {
+        font-weight: 400;
+        font-size: 15px;
+    }
+
+    .second input {
+        width: 400px;
+        height: 40px;
+
+    }
+
+    .address {
+        margin-right: 20px;
+    }
+
+    #submit {
+        width: 135px;
+        height: 55px;
+        margin-top: 60px;
+        border-radius: 10px;
+        background-color: rgb(19, 136, 231);
+        color: rgb(255, 255, 255);
+        padding-bottom: 8px;
+        border: none;
+        font-weight: 100;
+        margin-left: 280px;
+        font-size: 29px;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        -webkit-transition-property: all; 
+-webkit-transition-duration: 0.3s; 
+-webkit-transition-timing-function: ease;
+    }
+
+    #submit a {
+border: 1px solid rgb(33, 121, 223);
+        text-decoration: none;
+        color: rgb(7, 132, 204);
+        font-size: larger;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+
+    /* #submit a:hover {
+        background-color: white;
+        color: rgb(223, 43, 31);
+    } */
+    #submit:hover {
+        background-color: rgba(12, 95, 163, 0.336);
+        color: white;
+        
+        border: 1px solid rgb(33, 121, 223);
+        text-decoration: none;
+        color: rgb(5, 110, 230);
+        
+    }
+
+    /* button :hover{
+        background-color: white;
+        color: rgb(223, 43, 31);
+    }
+    .more:hover{
+        background-color: white;
+        color: rgb(223, 43, 31);
+    } */
+    .age input {
+        width: 300px;
+        margin-right: 100px;
+        margin-left: 20px;
+    }
+
+    .age p {
+        margin-left: 20px;
+    }
+
+    footer {
+        background-color: brown;
+        padding-left: 40px;
+        padding-right: 40px;
+        padding-top: 80px;
+        margin-top: 144px;
+        height: 100px;
+        font-size: 20px;
+        font-weight: lighter;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    footer,
+    a:link {
+        color: rgb(255, 255, 255);
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-size: 24px;
+
+    }
+
+    footer,
+    a:visited {
+        color: rgb(255, 255, 255);
+    }
+
+    footer,
+    a:hover {
+        color: rgb(255, 255, 255);
+
+    }
+
+    #math {
+        font-size: 16px;
+        color: grey;
+    }
+
+    #grey {
+        color: rgb(0, 153, 255);
+        margin-left: 10px;
+        text-align: center;
+    }
+    .map{
+        box-shadow: 10px 15px 13px 0 rgba(11, 141, 216, 0.486), 9px 19px 25px 0 rgba(0, 0, 0, 0.19);
+        width: 800px;
+        border-radius: 7px;
+        margin-left: 100px;
+        font-size: 20px;
+        font-weight: 500;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        color: rgb(0, 113, 219);
+    }
+    .flexall{
+        display: flex;
+        flex-direction: row;
+    }
+    .flexi{
+
+    }
+    .flexsmall {
+        display: flex;
+        flex-direction: row;
+        
+    }
+
+    footer {
+        background-color: rgb(0, 0, 0);
+        padding-left: 40px;
+        padding-right: 40px;
+        padding-top: 60px;
+        height: 550px;
+        font-size: 20px;
+        
+        font-weight: lighter;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    footer a:link {
+        color: rgb(255, 255, 255);
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-size: 24px;
+
+    }
+
+    footer a:visited {
+        color: rgb(255, 255, 255);
+    }
+
+    footer a:hover {
+        color: rgb(255, 255, 255);
+    }
+
+    #rine {
+        font-size: 20px;
+        font-weight: 100;
+        color: rgb(255, 255, 255);
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        width: 600px;
+    }
+
+    #icon {
+        width: 40px;
+        margin-right: 15px;
+    }
+
+    .icons {
+        display: flex;
+        flex-direction: row;
+    }
+
+    #email {
+        font-size: 20px;
+        color: white;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+font-weight: bold;
+    }
+
+    .email {
+        
+        color: white;
+        font-weight: 100;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+
+    .flexfoot {
+        margin-right: 200px;
+        display: flex;
+        flex-direction: column;
+        margin-left: 280px;
+    }
+
+    .contactflex {
+        font-size: 20px;
+        font-weight: 100;
+        color: white;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .reddit {
+        color: red;
+        font-size: 23px;
+
+
+    }
+
+    .footright {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .final {
+        display: flex;
+        flex-direction: row;
+        margin-top: -40px;
+    }
+
+    #companyicon {
+        width: 150px;
+    }
+
+    #contactus {
+        color: red;
+        margin-bottom: -50px;
+        font-weight: 400;
+    }
+
+    #office {
+        font-weight: 600;
+
+    }
+
+    .office {
+        display: flex;
+        flex-direction: row;
+        margin-top: -50px;
+    }
+
+    .office1 {
+        display: flex;
+        flex-direction: row;
+        margin-top: -70px;
+    }
+
+    .up {
+        margin-bottom: -50px;
+    }
+
+    #raise {
+        margin-top: -50px;
+    }
+    .mt-5{
+        
+        
+        background-image: url(static/img/construction17.jpg);
+        background-repeat: no-repeat;
+        filter: blur(2.5px);
+        width: 1900px;
+        height: 1050px;
+        position: absolute;
+    }
+    #find{
+        
+        font-size: 21px;
+        font-weight: 500;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        color: rgb(0, 113, 219);
+        
+
+    }
+    .find2{
+        margin-left: 3px;
+        position: relative;
+        background-color: rgba(255, 255, 255, 0.63);
+        width: 350px;
+        padding: 16px;
+        border-radius: 7px;
+        text-align: center;
+    }
+    #lighter{
+        margin-top: -10px;
+        position: relative;
+        font-weight: 200;
+        font-size: 20px;
+       
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        color: rgb(0, 113, 219);
+    }
+    .map{
+        margin-top: -100px;
+    }
+</style>
+
+</html>

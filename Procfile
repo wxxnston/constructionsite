@@ -1,0 +1,1 @@
+web gunicorn fupreproject.wsgi:application --log-file -

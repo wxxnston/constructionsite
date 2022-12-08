@@ -1,0 +1,167 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+
+    <title>Dashboard</title>
+</head>
+
+<body>
+
+    <div class="totalflex">
+        <div class="flexleft">
+            <a href="#"> Create New User</a>
+            <a href="#"> Users</a>
+            <a href="{% url 'dashboard' %}">Responses ({{list.count}})</a>
+            <a href="#"> General</a>
+        </div>
+        <div class="flexright">
+            <div class="welcome">
+                <div class="top">
+                    <h1>Welcome</h1>
+
+                    <a href="{% url 'adminlogin' %}"><input type="submit" id="logout" value="Logout"></a>
+                </div>
+            </div>
+
+            <div class="middle">
+                <button class="addnew"><a href="{% url 'dashboard' %}">Responses: {{list.count}} <img id="app" src="{% static 'img/icon.png' %}"></a><br><br></button>
+                <button class="addnew2"><a href="{% url 'dashboard' %}">Users: {{loglist.count}} <img id="app" src="{% static 'img/user.png' %}"></a><br><br></button>
+            </div>
+            
+        </div>
+    </div>
+    <style>
+        body {
+            margin: 0 auto;
+            background-color:#fff9f9;
+        }
+.count{
+    font-size: large;
+    color: black;
+}
+        .flexleft {
+            text-align: center;
+            font-size: 10px;
+            padding: 70px;
+            display: flex;
+            flex-direction: column;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            width: 330px;
+            height: 840px;
+            background-image: linear-gradient(rgb(111, 113, 114),rgb(33, 130, 241));
+            justify-content: space-evenly;
+            text-align: center;
+        }
+
+        .flexleft a {
+            
+            color: white;
+            font-size: 27px;
+            margin-left: 5px;
+            text-decoration: none;
+        }
+        /* .flexleft a:hover{
+            width: 200px;
+            height: 95px;
+            cursor: pointer;
+            border: 0.5px solid white;
+            border-radius: 5px;
+        } */
+        .totalflex {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .top {
+            margin-left: 60px;
+            padding-top: 20px;
+        }
+
+        .welcome {
+            margin-top: -21px;
+            background-image: linear-gradient(to right, rgb(71, 185, 252), rgb(55, 164, 228), rgb(0, 195, 255));
+            height: 210px;
+            color: white;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            width: 1600px;
+        }
+
+        .addnew {
+            padding-top: 28px;
+            margin-top: 100px;
+            margin-left: 270px;
+            border: none;
+            margin-right: 70px;
+            width: 580px;
+            height: 250px;
+            color: rgb(255, 255, 255);
+            font-size: 45px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            border-radius: 7px;
+            font-weight: bold;
+            background-image: linear-gradient(to right, rgb(0, 89, 255), rgb(0, 162, 255), rgb(0, 195, 255));
+        }
+.addnew2{
+    padding-top: 28px;
+            margin-top: 100px;
+            margin-left: 70px;
+            border: none;
+            width: 580px;
+            height: 250px;
+            color: rgb(255, 255, 255);
+            font-size: 45px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            border-radius: 7px;
+            font-weight: bold;
+            background-image: linear-gradient(to right, rgb(0, 0, 0), rgb(53, 54, 54), rgb(121, 121, 121));
+}
+.addnew2 a{
+    text-decoration: none;
+            color: white;
+}
+        .addnew a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .addnew:hover {
+            background-image: linear-gradient(to right, rgb(0, 4, 255), rgb(0, 102, 255), rgb(0, 140, 255));
+        }
+.middle{
+    margin-left: -110px;
+}
+        #logout {
+            border: none;
+            width: 130px;
+            height: 50px;
+            color: rgb(255, 255, 255);
+            font-size: 25px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            border-radius: 7px;
+            font-weight: bold;
+            background-color: rgb(209, 2, 2);
+            margin-left: 20px;
+        }
+
+        #logout:hover {
+            background-color: brown;
+        }
+
+        #icon {
+            width: 55%;
+        }
+        #app{
+            width: 130px;
+        }
+    </style>
+
+</body>
+
+</html>

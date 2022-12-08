@@ -1,0 +1,904 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+
+<body>
+    <div class="begin">
+        <div class="beginleft">
+
+            <img src="{% static 'img/company2.png' %}" id="schoolicon" alt="">
+        </div>
+        <div class="beginright">
+            <P>Need Help? Call Us Now <br>0808837383</P>
+            <img id="call" src="{% static 'img/call.jpg' %}">
+            <button id="signup"><a href="{% url 'index' %}">Contact Us</button>
+        </div>
+
+    </div>
+    <div class="header">
+        <p id="headeritem"><a href="{% url 'home' %}">Home</a></p>
+        <p id="headeritem"><a href="{% url 'about' %}">About Us</a></p>
+        <p id="headeritem"><a href="#">Events</a></p>
+        <p id="headeritem"><a href="#">Services</a></p>
+        <p id="headeritem"><a href="{% url 'gallery' %}">Gallery</a></p>
+    </div>
+    <div class="middle">
+        <p>The best construction <br> company in the nation.</p>
+        <br>
+        <h4> Let's construct a better tomorrow for future generations. It's your dream home. <br> Let's build it right.
+            <br> We provide quality construction for every project. <br>
+        </h4>
+        <img id="school">
+
+        <div class="more">
+            <!-- <button id="read"><img id="arrow" src="{% static 'img/arrow3.jpg' %}"><a href="{% url 'index' %}">Apply Now!</a></button> -->
+        </div>
+    </div>
+    <br>
+    <div class="advert">
+        <p> The best construction <br> company in <br> Nigeria.</p>
+        <div class="learn">
+            <div class="language">
+                <img id="globe" src="{% static 'img/architecture.png' %}">
+                <p>The Best Architects In the Business</p>
+            </div>
+            <div class="business">
+                <img id="globe" src="{% static 'img/builder.png' %}">
+                <p>Hard working labourers</p>
+            </div>
+            <div class="book">
+                <img id="globe" src="{% static 'img/safety.png' %}">
+                <p>Safe workspace and environment</p>
+            </div>
+        </div>
+    </div>
+    <div class="black">
+
+        <H1 id="gallery">We are the future of construction.</H1>
+        <div class="describe">
+            RINE EDH continues to grow its focus of becoming the leading provider of essential needs in Food and
+            Shelter in Sub-Saharan Africa. <br>
+            Our vision is to be a world-class enterprise that is passionate about the quality of life of the general
+            populace and high returns to stakeholders. <br>
+
+        </div>
+
+        <div class="mission">
+            <div id="atitle">Why Choose Us</div>
+            <br>
+            <div class="quality">Quality Assurance</div>
+            <p id="about">
+                Our prime objective is to provide services in a manner which conform to contractual and regulatory
+                requirements. In order to achieve this objective, it is our policy to establish and maintain an
+                efficient <br>
+                Quality Assurance programme planned and developed in conjunction with all management functions inline
+                with
+                ISO 9001 and 9002 requirements.
+                <br><br><br><br><br>
+            </p>
+
+            <img id="work" src="{% static 'img/quality.jpg' %}">
+        </div>
+        <div class="mission2">
+            <img id="work2" src="{% static 'img/work2.jpg' %}">
+            <div class="flexit">
+                <p id="atitle2">Community Relations</p>
+                <br>
+
+                <p id="about2">Our Corporate Community Engagement (CCE) strategy is built on native insights and deep
+                    knowledge of
+                    relationship management between other construction companies and their host communities in the Nigerian oil
+                    and
+                    gas
+                    industry; aimed at eliciting convivial stakeholder relationship that is built on the principle of
+                    shared
+                    responsibility for mutual benefits.
+
+                    We have over 22-years' experience and history of smoothening relations within the communities we
+                    have
+                    operated in; interfacing with the different community demographics, community leadership hierarchy,
+                    governments and the third sector (NGOs, CBOs, FBOs, YBOs) etc.</p>
+            </div>
+        </div>
+    </div>
+    <br><br>
+    <div class="clients">
+        <img id="clientstotal" src="{% static 'img/client1.png' %}">
+        <img id="clients" src="{% static 'img/client2.png' %}">
+        <img id="clients" src="{% static 'img/CAT.png' %}">
+        <img id="clients" src="{% static 'img/dangote.png' %}">
+        <img id="leadway" src="{% static 'img/clientlead.png' %}">
+        <img id="clients" src="{% static 'img/clientz.png' %}">
+
+    </div>
+    <footer>
+        <div class="final">
+            <div class="flexfoot">
+                <br>
+                <img src="{% static 'img/company.png' %}" id="companyicon" alt="">
+                <p id="rine">RINE EDH INTEGRATED SERVICES LIMITED is an indigenous Limited Liability Company
+                    incorporated in
+                    2012 with RC 1040277 under the laws of the Federal Republic of Nigeria. It is registered with
+                    the
+                    Department
+                    of Petroleum Resources of the Nigerian National Corporation, Nipex, NJQS, and the Inland Revenue
+                    Service</p>
+
+                <div class="icons">
+                    <img id="icon" src="{% static 'img/twitter.png' %}">
+                    <img id="icon" src="{% static 'img/insta.png' %}">
+                    <img id="icon" src="{% static 'img/linked.png' %}">
+                </div>
+                <div class="email">
+                    <p id="email">Email:
+                    <p>
+                        . loremeed2@gmail.com <br>
+                        . info@lorem.com
+                </div>
+            </div>
+            <div class="footright">
+                <div class="contactflex">
+                    <h2 id="contactus">Contact Us</h2> <br>
+                    <p>
+                    <div class="reddit">Headquarters</div>
+                    114, Ebitu Ukiwe Street, Jabi District, <br>
+                    Abuja, Nigeria</p>
+                    <br>
+
+                    <p>
+                    <div class="office1">
+                        <p>
+                        <div id="office">Office: </div> +234 805 333 3861
+                    </div>
+                    </p> <br>
+                    <div class="office">
+                        <p>
+                        <div id="office">Mobile: </div> +234706 876 0336
+                    </div>
+                    </p>
+                </div>
+
+                <br> <br>
+
+                <div class="contactflex">
+
+                    <p>
+                    <div id="raise" class="reddit">Warri Site Office</div>
+                    #GQC8+PC9, Sapele Road, Warri 332104,<br> Delta State, Nigeria.</p>
+                    <br>
+                    <div class="office">
+                        <p>
+                        <div id="office">Mobile: </div> +234 803 424 3736
+                    </div>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+<style>
+    body {
+        margin: 0 auto;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+
+    #signup {
+        margin-top: 30px;
+        border: none;
+        width: 170px;
+        height: 60px;
+        background-color: rgb(255, 255, 255);
+        color: rgb(255, 255, 255);
+        font-size: 25px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        border-radius: 7px;
+        font-weight: bold;
+        margin-left: 130px;
+        -webkit-transition-property: all;
+        -webkit-transition-duration: 0.3s;
+        -webkit-transition-timing-function: ease;
+    }
+
+    .black {
+        background-image: linear-gradient(rgb(124, 34, 34), rgb(43, 43, 177));
+        height: 1930px;
+        margin-top: -50px;
+        padding-top: 300px;
+    }
+
+    #signup:hover {
+        color: rgb(255, 255, 255);
+        border: 2px solid rgb(0, 0, 0);
+        font-size: 30px;
+
+    }
+
+    .beginright a {
+        color: rgb(223, 43, 31);
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    #call {
+        width: 50px;
+        height: 50px;
+        margin-top: 50px;
+        margin-left: -90px;
+        border: none;
+    }
+
+    .beginleft {
+        display: flex;
+        flex-direction: row;
+        font-size: 20px;
+        justify-content: space-between;
+        width: 500px;
+        color: white;
+        margin-right: 800px;
+    }
+
+    .begin {
+        height: 120px;
+        display: flex;
+        flex-direction: row;
+        background-color: rgb(223, 43, 31);
+    }
+
+    .beginright {
+        display: flex;
+        flex-direction: row;
+        font-size: 22px;
+        color: white;
+        font-weight: bolder;
+
+    }
+
+    .beginright button {
+        margin-right: 50px;
+    }
+
+    /* #school{
+        width: 100%;
+        height: 50%;
+    } */
+    #schoolicon {
+        width: 200px;
+        height: 220px;
+        margin-top: -45px;
+        margin-left: 40px;
+    }
+
+    .header {
+        margin-left: 580px;
+        margin-top: 12px;
+        display: flex;
+        flex-direction: row;
+        height: 30px;
+        font-size: 22px;
+        margin-bottom: 10px;
+        font-weight: bold;
+        
+    }
+    #headeritem{
+       margin-left: 70px;
+       margin-top: -0.5px;
+    }
+
+    .header a {
+        color: rgb(223, 43, 31);
+        -webkit-transition-property: all;
+        -webkit-transition-duration: 0.3s;
+        -webkit-transition-timing-function: ease;
+    }
+
+    .header a:hover {
+        color: rgb(0, 0, 0);
+        font-size: 20px;
+        border-bottom: 1px solid rgb(255, 0, 0);
+        transform: scale(1.6);
+        display: block;
+    }
+
+    /* #school {
+        width: 216vh;
+        height: 800px;
+border: 0px solid black;
+        background-image: linear-gradient(rgb(255, 1, 1,0.3),rgb(0, 0, 255,0.3)),url(static/img/construction2.jpg);
+        background-repeat: no-repeat;
+    } */
+    #cf {
+        position: relative;
+        height: 800px;
+        width: 190vh;
+        margin: 0 auto;
+        margin-left: -1px;
+    }
+
+    #cf img {
+        position: absolute;
+        left: 0;
+        -webkit-transition: opacity 1s ease-in-out;
+        -moz-transition: opacity 1s ease-in-out;
+        -o-transition: opacity 1s ease-in-out;
+        transition: opacity 1s ease-in-out;
+    }
+
+    .top {
+        width: 1902px;
+        height: 790px;
+    }
+
+    .bottom {
+        width: 1902px;
+    }
+
+    .middle {
+
+        background-image: linear-gradient(rgba(255, 1, 1, 0.623), rgb(0, 0, 255, 0.3)), url(static/img/construction2.jpg);
+        width: 203vh;
+        height: 800px;
+        background-repeat: no-repeat;
+        animation: mymove 20s;
+        animation-delay: 3s;
+        animation-timing-function: ease-in-out;
+        -webkit-animation-timing-function: ease-in-out;
+        animation-iteration-count: infinite;
+    }
+
+    @keyframes mymove {
+
+        25% {
+
+            opacity: 0.6;
+        }
+
+        40% {
+            background-image: linear-gradient(rgba(255, 1, 1, 0.952), rgb(0, 0, 255, 0.3)), url(static/img/construction6.jpg);
+            opacity: 1;
+        }
+
+        /* 50%{
+            opacity: 1;
+        } */
+        /* 60% {
+            opacity: 1;
+        } */
+
+        50% {
+            opacity: 0.6;
+        }
+
+        65% {
+            background-image: linear-gradient(rgba(255, 1, 1, 0.747), rgb(0, 0, 255, 0.3)), url(static/img/construction7.jpg);
+            opacity: 1;
+        }
+
+        70% {
+            opacity: 0.6;
+        }
+
+        75% {
+            background-image: linear-gradient(rgba(255, 1, 1, 0.795), rgb(0, 0, 255, 0.3)), url(static/img/construction8.jpg);
+
+
+        }
+
+        80% {
+            opacity: 1;
+        }
+
+        90% {
+            opacity: 0.6;
+        }
+
+        100% {
+            background-image: linear-gradient(rgba(255, 1, 1, 0.623), rgb(0, 0, 255, 0.3)), url(static/img/construction2.jpg);
+
+
+        }
+
+
+    }
+
+    /* @keyframes cfFadeInOut {
+  0% {
+  opacity:1;
+}
+45% {
+opacity:1;
+}
+55% {
+opacity:0;
+}
+100% {
+opacity:0;
+}
+}
+
+#cf img.top {
+animation-name: cfFadeInOut;
+animation-timing-function: ease-in-out;
+animation-iteration-count: infinite;
+animation-duration: 5s;
+animation-direction: alternate;
+}
+#cf img.bottom {
+animation-name: cfFadeInOut;
+animation-timing-function: ease-in-out;
+animation-iteration-count: infinite;
+animation-duration: 5s;
+animation-direction: alternate;
+} */
+    .middle {
+        position: relative;
+    }
+
+    .middle p {
+        position: absolute;
+        color: white;
+        font-size: 60px;
+        font-weight: bold;
+        margin-left: 100px;
+        margin-top: 150px;
+    }
+
+    .middle h4 {
+        position: absolute;
+        color: white;
+        margin-top: 290px;
+        margin-left: 100px;
+        font-size: 20px;
+    }
+
+    #arrow {
+        width: 35px;
+        background: transparent;
+        margin-left: -5px;
+        margin-top: 10px;
+        margin-right: 0px;
+    }
+
+    .header a {
+        color: rgb(223, 43, 31);
+    }
+
+    #read {
+        position: absolute;
+        width: 195px;
+        height: 65px;
+        border-radius: 10px;
+        background-color: rgb(223, 43, 31);
+        color: rgb(255, 255, 255);
+        padding-bottom: 18px;
+        border: none;
+    }
+
+    #read a {
+        color: white;
+    }
+
+    .more {
+        margin-top: -400px;
+        position: absolute;
+        margin-left: 120px;
+        color: white;
+    }
+
+    .more a {
+        margin-bottom: 15px;
+        color: white;
+        font-size: 25px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-weight: bold;
+    }
+
+    #read a:hover {
+        background-color: white;
+        color: rgb(223, 43, 31);
+    }
+
+    .more a:hover {
+        color: rgb(223, 43, 31);
+    }
+
+    #read:hover {
+        background-color: white;
+        color: rgb(223, 43, 31);
+    }
+
+    .advert {
+        margin-left: 200px;
+        width: 1400px;
+        height: 300px;
+        border-radius: 8px;
+        background-color: rgb(223, 43, 31);
+        margin-top: -180px;
+        color: white;
+        position: absolute;
+        display: flex;
+        flex-direction: row;
+        box-shadow: -10px 10px 6px rgb(41, 41, 41, 0.3);
+    }
+
+    .advert p {
+        font-size: 39px;
+        font-weight: bolder;
+        margin-left: 40px;
+        margin-top: 65px;
+        margin-right: 100px;
+    }
+
+    #globe {
+        width: 120px;
+        margin-right: 85px;
+        margin-bottom: 5px;
+    }
+
+    .language {
+        display: flex;
+        flex-direction: column;
+        color: white;
+        margin-right: 90px;
+        text-align: center;
+        align-items: center;
+        /* position: absolute; */
+    }
+
+    .language p {
+        font-size: 25px;
+        color: white;
+        margin-top: -0.1px;
+        margin-left: 10px;
+        font-weight: bold;
+
+    }
+
+    .business {
+        display: flex;
+        flex-direction: column;
+        color: white;
+        align-items: center;
+        margin-right: 90px;
+        text-align: center;
+        /* position: absolute; */
+    }
+
+    .business p {
+        font-size: 25px;
+        color: white;
+        font-weight: bold;
+        margin-top: -0.1px;
+        margin-left: -1px;
+
+    }
+
+    .book {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        color: white;
+        /* position: absolute; */
+        text-align: center;
+    }
+
+    .book p {
+        font-size: 25px;
+        color: white;
+        font-weight: bold;
+        margin-top: -0.1px;
+        margin-left: -1px;
+    }
+
+    .learn {
+        display: flex;
+        flex-direction: row;
+        margin-top: 70px;
+    }
+
+    footer {
+        background-color: rgb(0, 0, 0);
+        padding-left: 40px;
+        padding-right: 40px;
+        padding-top: 70px;
+        height: 550px;
+        font-size: 20px;
+        margin-top: -150px;
+        font-weight: lighter;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    footer a:link {
+        color: rgb(255, 255, 255);
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-size: 24px;
+
+    }
+
+    footer a:visited {
+        color: rgb(255, 255, 255);
+    }
+
+    footer a:hover {
+        color: rgb(255, 255, 255);
+    }
+
+    #rine {
+        font-size: 20px;
+        font-weight: 100;
+        color: rgb(255, 255, 255);
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        width: 600px;
+    }
+
+    #icon {
+        width: 40px;
+        margin-right: 15px;
+    }
+
+    .icons {
+        display: flex;
+        flex-direction: row;
+    }
+
+    #email {
+        font-size: 20px;
+        color: white;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-weight: bold;
+    }
+
+    .email {
+
+        color: white;
+        font-weight: 100;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+
+    .flexfoot {
+        margin-right: 200px;
+        display: flex;
+        flex-direction: column;
+        margin-left: 280px;
+    }
+
+    .contactflex {
+        font-size: 20px;
+        font-weight: 100;
+        color: white;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .reddit {
+        color: red;
+        font-size: 23px;
+
+
+    }
+
+    .footright {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .final {
+        display: flex;
+        flex-direction: row;
+        margin-top: -40px;
+    }
+
+    #companyicon {
+        width: 150px;
+    }
+
+    #contactus {
+        color: red;
+        margin-bottom: -50px;
+        font-weight: 400;
+    }
+
+    #office {
+        font-weight: 600;
+
+    }
+
+    .office {
+        display: flex;
+        flex-direction: row;
+        margin-top: -50px;
+    }
+
+    .office1 {
+        display: flex;
+        flex-direction: row;
+        margin-top: -70px;
+    }
+
+    .up {
+        margin-bottom: -50px;
+    }
+
+    #raise {
+        margin-top: -50px;
+    }
+
+
+    #gallery {
+        margin-top: -50px;
+        color: rgb(255, 255, 255);
+        margin-left: 700px;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-weight: 100;
+        font-size: 30px;
+        margin-bottom: 40px;
+    }
+
+    .describe {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 27px;
+        width: 800px;
+        text-align: center;
+        color: rgb(255, 255, 255);
+        font-weight: 300;
+        margin-left: 530px;
+        margin-bottom: 180px;
+        margin-top: 60px;
+    }
+
+    .mission {
+        margin-top: 100px;
+        text-align: left;
+        animation: mymission 1s;
+        animation-delay: 0.5s;
+        animation-timing-function: ease-in-out;
+        -webkit-animation-timing-function: ease-in-out;
+        animation-iteration-count: 2;
+
+    }
+
+    /* @keyframes mymission {
+        25% {
+
+opacity: 0;
+}
+
+
+
+
+
+
+
+100% {
+opacity: 1;
+} */
+
+
+
+    #work {
+        width: 900px;
+        height: 450px;
+        float: right;
+        margin-top: -450px;
+        margin-right: 30px;
+    }
+
+    #work2 {
+        width: 900px;
+        height: 450px;
+        margin-left: 40px;
+        margin-top: -20px;
+        margin-right: 30px;
+        margin-bottom: 200px;
+    }
+
+    .mission2 {
+        display: flex;
+        flex-direction: row;
+        margin-top: 100px;
+        text-align: left;
+
+    }
+
+    #atitle2 {
+        font-size: 37px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-weight: 800;
+        margin-bottom: -20px;
+        color: red;
+        margin-left: 55px;
+        text-align: left;
+
+    }
+
+    #about2 {
+        margin-left: 50px;
+        width: 750px;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 23px;
+        color: rgb(255, 255, 255);
+        font-weight: 200;
+        text-align: justify;
+    }
+
+    #about {
+        margin-left: 60px;
+        width: 750px;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 23px;
+        color: rgb(255, 255, 255);
+        font-weight: 200;
+        text-align: justify;
+    }
+
+    #atitle {
+        font-size: 37px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-weight: 800;
+        margin-bottom: -20px;
+        color: red;
+        margin-left: 55px;
+        text-align: left;
+
+    }
+
+    .last {
+        background-image: linear-gradient(to right, rgba(223, 23, 16, 0.692), rgb(2, 18, 56));
+        width: 1910px;
+        height: 400px;
+        display: flex;
+        flex-direction: row;
+        margin-top: 100px;
+
+    }
+
+    .quality {
+        color: rgb(2, 75, 231);
+        font-size: 27px;
+        margin-left: 60px;
+
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+        margin-top: 30px;
+        font-weight: 400;
+        text-align: justify;
+
+    }
+    .clients{
+        margin-top: -400px;
+        display: flex;
+        flex-direction: row;
+        margin-left: 250px;
+        margin-bottom: 200px;
+    }
+    #clients{
+        width: 160px;
+        height: 140px;
+        margin-left: 50px;
+    }
+    #leadway{
+        width: 220px;
+        height: 170px;
+        margin-left: 50px;
+        margin-top: -20px;
+    }
+    #clientstotal{
+        width: 230px;
+        height: 150px;
+        margin-left: 50px;
+    }
+</style>
+
+</html>

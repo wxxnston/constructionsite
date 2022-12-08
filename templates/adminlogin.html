@@ -1,0 +1,387 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+  <title>Sign In</title>
+</head>
+
+<body>
+  <div class="welcome">
+
+    <div class="top">
+
+      <!-- <h1>Welcome, {{request.session.staffname}}</h1> -->
+      <!-- <img id="logo" src="{% static 'img/company.png' %}" alt="">-->
+      <p id="begin">Login</p> 
+      
+
+    </div>
+  </div>
+  <!-- <img id="im" src="{% static 'img/im.jpg' %}" alt=""> -->
+
+  <div class="container"></div>
+  <div class="homeflex">
+
+    <div id="homecol">
+      <img id="icon" src="{% static 'img/icon.png' %}" alt="">
+      <br>
+      <!-- <h2 id="today">Start Today.</h2> -->
+      <!-- <h1 id="title">The Best Stock Management <br> System Out There!</h1> -->
+      <br><br>
+      <form method="POST">
+        {% csrf_token %}
+        <div class="msg">
+          {% for msg in messages %}
+          <h1>{{msg}}</h1>
+          {% endfor %}
+        </div>
+        <!-- <input type="email" id="firstname" name="email" placeholder="Email"><br><br> -->
+        <input type="text" id="firstname" name="username" placeholder="Username"><br><br>
+        <input type="password" id="password" name="password" placeholder="Password"><br><br>
+
+        <input type="submit" id="submit" value="Login"><br>
+
+        <!-- <div id="or">
+          <hr>OR
+          <hr>
+        </div> -->
+        <!-- <div class="signup"><button id="signup"><a href="signup">Sign Up Here!</button></a><br></div>
+        <p id="privacy">By signing up, you agree to the <a href="#">Terms of Service</a> and <br><a href="#">Privacy
+            Policy </a> including <a href="#">Cookie Use.</a></p> -->
+      </form>
+
+    </div>
+
+  </div>
+
+  
+</body>
+<style>
+  .homeflex {
+    /* width: 1930px;
+    height: 600px; */
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    margin-top: -1000px;
+
+  }
+
+  .container {
+    background-image: url(static/img/gallery3.jpg);
+    height: 900px;
+    width: 1915px;
+    margin: 0 auto;
+    border-radius: 3px;
+    margin-left: -20px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: blur(8px);
+    -webkit-filter: blur(2px);
+  }
+
+
+
+  #img {
+    margin-top: -200px;
+    height: 900px;
+    width: 1000px;
+    margin-top: 90px;
+    margin-right: 60px;
+
+  }
+
+  #firstname {
+    width: 300px;
+    height: 40px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0);
+    font-weight: 100;
+    font-size: 25px;
+    outline: none;
+    border: none;
+    font-weight: bold;
+    border-bottom: 1px solid rgb(56, 56, 56);
+  }
+
+  #firstname:focus {
+    border-bottom: 1px solid rgb(214, 8, 8);
+    font-size: 25px;
+  }
+
+  #password {
+    font-weight: bold;
+    width: 300px;
+    height: 40px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0);
+
+    font-size: 25px;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid rgb(56, 56, 56);
+  }
+
+  #password:focus {
+    border-bottom: 1px solid rgb(214, 8, 8);
+    font-size: 25px;
+  }
+
+  :placeholder-shown {
+    font-size: 25px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+
+  #submit {
+    border: none;
+    width: 100px;
+    height: 40px;
+    color: rgb(8, 52, 94);
+    font-size: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border-radius: 7px;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 100px;
+    background-color: rgb(89, 126, 175);
+  }
+
+  #submit:hover {
+    background-color: rgb(23, 79, 153);
+    color: white;
+  }
+
+  #signup {
+    margin-top: 20px;
+    border: none;
+    width: 300px;
+    height: 40px;
+    background-color: rgb(35, 90, 192);
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border-radius: 7px;
+    font-weight: 400;
+    margin-left: 10px;
+  }
+
+  #signup:hover {
+    background-color: rgb(20, 58, 94);
+    color: white;
+  }
+
+
+  #title {
+    margin-bottom: -20px;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+
+  #homecol {
+    margin-top: 200px;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid rgba(143, 143, 143, 0.418);
+    border-radius: 20px;
+    padding-left: 20px;
+    padding-right: 90px;
+    padding-bottom: 30px;
+    margin-left: 700px;
+    background-color: rgba(255, 255, 255, 0.904);
+    padding-top: 10px;
+  }
+
+  #icon {
+    margin-top: 50px;
+    width: 100px;
+    margin-bottom: -20px;
+    margin-left: 190px;
+  }
+
+  #today {
+    margin-top: 50px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bold;
+  }
+
+  hr {
+    color: black;
+    width: 200px;
+    height: 1px;
+    margin-right: -0.2px;
+    margin-left: -0.2px;
+  }
+
+  #or {
+    display: flex;
+    flex-direction: row;
+    font-size: 16px;
+    color: rgb(168, 167, 167);
+    margin-left: -53px;
+  }
+
+  #privacy {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 16px;
+    text-align: center;
+    margin-left: -65px;
+  }
+
+  footer {
+    margin-top: 150px;
+    font-size: 20px;
+    font-weight: lighter;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+  }
+
+  footer a {
+    color: rgb(177, 177, 177);
+    margin-right: 20px;
+    margin-left: 120px;
+    text-decoration: none;
+  }
+
+  /* .signup, a:visited{
+    text-decoration: none;
+    color: white;
+} */
+  a:link {
+    text-decoration: none;
+    color: rgb(64, 97, 187);
+  }
+
+  a:visited {
+    text-decoration: none;
+    color: rgb(64, 168, 187);
+  }
+
+  a:active {
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: none;
+  }
+
+  #firstname2 {
+    width: 300px;
+    height: 40px;
+    border: 0.5px solid gray;
+    border-radius: 10px;
+    padding-left: 20px;
+    font-size: 20px;
+  }
+
+  #password2 {
+    width: 300px;
+    height: 40px;
+    border: 0.5px solid gray;
+    border-radius: 10px;
+    padding-left: 20px;
+    font-size: 20px;
+  }
+
+  #submit2 {
+    border: none;
+    width: 100px;
+    height: 40px;
+    background-color: rgb(115, 170, 233);
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border-radius: 7px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-left: 100px;
+  }
+
+  .signupform {
+    margin-left: 300px;
+    margin-top: 100px;
+
+  }
+
+  #signup {
+    margin-top: 20px;
+    border: none;
+    width: 300px;
+    height: 40px;
+    background-color: rgb(35, 90, 192);
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border-radius: 7px;
+    font-weight: 400;
+    margin-left: 10px;
+  }
+
+  #signup2:hover {
+    background-color: rgb(20, 58, 94);
+    color: white;
+  }
+
+  #signup a {
+    color: white;
+  }
+
+  form {
+    margin-left: 90px;
+  }
+
+  .top {
+    margin-left: 60px;
+    padding-top: 10px;
+    display: flex;
+    flex-direction: row;
+    font-size: 60px;
+    padding-left: 860px;
+  }
+
+  .welcome {
+    margin-left: -35px;
+    margin-top: -21px;
+    background-image: linear-gradient(to right, rgb(72, 167, 255), rgb(31, 137, 199), rgb(0, 195, 255));
+    height: 210px;
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    width: 1930px;
+  }
+
+  #logo {
+    margin-top: 40px;
+    width: 160px;
+    margin-right: 475px;
+    height: 130px;
+  }
+
+  #begin {
+    margin-right: -1600px;
+margin-left: 1000pxx;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: white;
+    font-weight: lighter;
+  }
+
+  .msg {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: red;
+    font-size: 10px;
+    font-weight: lighter;
+    margin-left: 10px;
+  }
+
+  .signup {
+    color: white;
+  }
+</style>
+
+</html>
